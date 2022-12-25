@@ -1,0 +1,44 @@
+# ─ flowfield's ─────────────────────────────────────────────────────────────────────────────────── #
+# ███████ ████████  █████  ██████  ███████ ██   ██ ██ ██████      ██████   ██████  ████████ ███████ #
+# ██         ██    ██   ██ ██   ██ ██      ██   ██ ██ ██   ██     ██   ██ ██    ██    ██    ██      #
+# ███████    ██    ███████ ██████  ███████ ███████ ██ ██████      ██   ██ ██    ██    ██    ███████ #
+#      ██    ██    ██   ██ ██   ██      ██ ██   ██ ██ ██          ██   ██ ██    ██    ██         ██ #
+# ███████    ██    ██   ██ ██   ██ ███████ ██   ██ ██ ██          ██████   ██████     ██    ███████ #
+# ───────────────────────────────────────────────────────────────────────────────────────────────── #
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$all"
+
+[character]
+success_symbol = " [](#f5c2e7)"
+error_symbol = " [](#f38ba8)"
+
+[username]
+format="[](fg:#cba6f7 bg:none)[ ](fg:#313244 bg:#cba6f7)[](fg:#cba6f7 bg:#313244)[ $user](fg:#cba6f7 bg:#313244)[](fg:#313244 bg:none) "
+show_always = true
+
+[hostname]
+ssh_only = true
+format = "[](fg:#eba0ac bg:none)[ ](fg:#313244 bg:#eba0ac)[](fg:#eba0ac bg:#313244)[ $hostname](fg:#eba0ac bg:#313244)[](fg:#313244 bg:none) "
+
+[cmd_duration]
+min_time = 1
+format = "[](fg:#fab387 bg:none)[ ](fg:#313244 bg:#fab387)[](fg:#fab387 bg:#313244)[ $duration](fg:#fab387 bg:#313244)[](fg:#313244 bg:none) "
+disabled = false
+
+[directory]
+format = "[](fg:#f2cdcd bg:none)[ ](fg:#313244 bg:#f2cdcd)[](fg:#f2cdcd bg:#313244)[ $path](fg:#f2cdcd bg:#313244)[](fg:#313244 bg:none) "
+truncate_to_repo  = true
+truncation_symbol = "git:"
+
+[git_branch]
+format = "[](fg:#b4befe bg:none)[שׂ ](fg:#313244 bg:#b4befe)[](fg:#b4befe bg:#313244)[ $branch](fg:#b4befe bg:#313244)[](fg:#313244 bg:none) "
+
+[git_status]
+disabled = true
+
+[git_commit]
+disabled = true
+
+[git_state]
+disabled = true

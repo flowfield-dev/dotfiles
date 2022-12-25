@@ -1,0 +1,136 @@
+# See dunst(5) for all configuration options
+
+[global]
+    # Display
+    # Show on monitor with focus #
+    follow = mouse
+
+    # Properties
+    notification_limit = 4
+    # Show if notifs are hidden because of the limit #
+    indicate_hidden = yes
+    # Sort messages by urgency #
+    sort = yes
+
+    # Geometry
+    origin = top-right
+    offset = 15x15
+    separator_height = 2
+
+    # Sizing
+    padding = 8
+    horizontal_padding = 8
+    text_icon_padding = 0
+    frame_width = 2
+    gap_size = 0
+
+    # Colors
+    frame_color = "#f5c2e7"
+    separator_color = frame
+
+    # Text
+    font = JetBrainsMono Nerd Font 10
+    line_height = 0
+    markup = full
+
+    # Message format
+    #   %a  appname
+    #   %s  summary
+    #   %b  body
+    #   %i  iconname (including its path)
+    #   %I  iconname (without its path)
+    #   %p  progress value if set ([  0%] to [100%]) or nothing
+    #   %n  progress value if set without any extra characters
+    #   %%  Literal %
+    # Markup is allowed
+    format = "<b>%s</b>\n%b"
+
+    # Text Alignment #
+    alignment = left
+
+    # Vertical Text Alignment #
+    vertical_alignment = center
+
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+
+    # Icons
+
+    # Define a single theme for icons #
+    enable_recursive_icon_lookup = true
+
+    # Icon Theme
+    icon_theme = Papirus-Dark
+    icon_position = left
+
+    min_icon_size = 32
+    max_icon_size = 128
+
+    # Not needed, we use `icon_theme` :> #
+    # icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+
+    # History
+    sticky_history = yes
+    history_length = 20
+
+    # Advanced
+
+    # Browser for opening urls in context menu #
+    browser = /usr/bin/xdg-open
+
+    # Always run rule-defined scripts, even if the notification is suppressed #
+    always_run_script = true
+
+    # Define the title of the windows spawned by dunst #
+    title = Dunst
+
+    # Define the class of the windows spawned by dunst #
+    class = Dunst
+
+    # Notification border radius #
+    corner_radius = 10
+
+    # Ignore the dbus closeNotification message #
+    ignore_dbusclose = false
+
+    # Wayland
+    force_xwayland = false
+
+    # Legacy
+    force_xinerama = false
+
+    # Mouse
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[experimental]
+    # Calculate the dpi to use on a per-monitor basis.
+    # If this setting is enabled the Xft.dpi value will be ignored and instead
+    # dunst will attempt to calculate an appropriate dpi value for each monitor
+    # using the resolution and physical size. This might be useful in setups
+    # where there are multiple screens with very different dpi values.
+    per_monitor_dpi = false
+
+
+[urgency_low]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#a6e3a1"
+    timeout = 10
+
+[urgency_normal]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#f5c2e7"
+    timeout = 10
+
+[urgency_critical]
+    background = "#1e1e2e"
+    foreground = "#eba0ac"
+    frame_color = "#f38ba8"
+    timeout = 0
